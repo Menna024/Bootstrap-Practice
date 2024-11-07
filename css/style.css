@@ -1,0 +1,342 @@
+:root{
+    --ligh-bg-color:#F3F3F3;
+    --light-font-colo: rgb(116, 129, 130);
+    --font-family-Poppins: 'Poppins', sans-serif;
+    --font-family-Montserrat: var(--font-family-Montserrat);
+}
+
+.body{
+    margin: 0;
+}
+
+.navbar{
+    background-color: aqua;
+    position:fixed;
+}
+
+.navbar-brand{
+    margin-left: 50px;
+    font-family:var(--font-family-Montserrat);
+    font-size: 18px;    
+    font-weight: 800;
+    line-height: 26px;
+}
+
+.navbar-nav{
+    margin-left: auto;
+    
+}
+.nav-item{
+    margin-right: 40px;
+}
+
+.nav-link{
+    color:white;
+    font-family:var( --font-family-Poppins);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#home{
+    height: 100vh;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.hello-home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hello-home-content h1{
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 55px;
+    font-family: var(--font-family-Montserrat);
+}
+
+.hello-home-content h2{
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 72px;
+    font-family: var(--font-family-Montserrat);
+}
+
+.hello-home-content h2::after{
+    content: '';
+    font-family: var(--font-family-Montserrat);
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 72px;
+    animation: typing 10s steps(10) infinite alternate;
+}
+
+@keyframes typing{
+    0%{
+       content: "De|"; 
+    }
+    5%{
+        content: "Deve|";
+    }
+    10%{
+        content: "Develo|";
+    }
+    15%{
+        content: "Developer|";
+    }
+    20%{
+        content: "Develo|";
+    }
+    25%{
+        content: "Deve|";
+    }
+    30%{
+        content: "De|";
+    }
+    35%{
+        content: "|";
+    }
+    40%{
+        content: "De|";
+    }
+    45%{
+        content: "Desi|";
+    }
+    50%{
+        content: "Design|";
+    }
+    55%{
+        content: "Designer|";
+    }
+    60%{
+        content: "Design|";
+    }
+    65%{
+        content: "Desi|";
+    }
+    70%{
+        content: "De|";
+    }
+    75%{
+        content: "|";
+    }
+    80%{
+        content: "Me|";
+    }
+    85%{
+        content: "Menn|";
+    }
+    90%{
+        content: "Menna A|";
+    }
+    95%{
+        content: "Menna Aym|";
+    }
+    100%{
+        content: "Menna Ayman|";
+    }
+}
+
+.social-media-icons{
+    width:16%;
+}
+
+.social-media-icons i{
+    border-radius: 50%;
+    padding: 10px;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.progress-bars{
+    margin-top:15px;
+    width: 95%;
+}
+
+
+.progress-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    text-align: center;
+
+}
+
+.hero-img {
+    transform: translateX(22%);
+    position: relative; 
+}
+
+.hero-img::after{
+    content: "";
+    width: 70%;
+    height: 75%;
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#about img{
+    width: 80%;
+    height: 80%;
+    margin-top: 50px;
+    margin-right: auto   ;    
+}
+
+.about-me-h2{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 33px;
+    font-family: var(--font-family-Montserrat);
+    color: rgb(52, 52, 52);
+}
+
+.about-me-title{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: var(--font-family-Poppins);
+    color: rgb(153, 153, 153);
+}
+
+.about-me-description{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: var(--font-family-Poppins);
+    color:     rgb(116, 129, 130);
+}
+
+.progress-bar p{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 14px;
+    font-family: var(--font-family-Montserrat);
+    color: white;
+    padding: 5px;
+}
+
+.about-btns .cv-btn:hover{
+    background-color:white !important;
+    color: black !important;
+}
+
+.about-btns .contact-btn:hover{
+    background-color: black !important;
+    
+}
+
+.about-btns .contact-btn:hover a{
+    color: white !important;
+}
+
+#works{
+    background-color: cadetblue;
+    height: 500px;
+}
+
+
+#services{
+    background-color: var(--ligh-bg-color);
+    padding-bottom: 50px;
+}
+
+.header-title{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;                       
+    font-family: var(--font-family-Montserrat);
+    color: rgb(52, 52, 52);
+    position: relative;
+    z-index: 1;    
+}
+
+ .header-title::after{
+    content: '';
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    width: 100%; 
+    height: 60%;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: inline-block; 
+}
+
+.service-box{
+    padding: 35px;
+    border: 15px solid var(--ligh-bg-color);
+    border-radius: 20px; 
+}
+
+.service-box:hover i{
+    background-color: black !important; 
+    color:white;
+    transition: 0.8s;
+}
+
+#services i{
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--ligh-bg-color);
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+#services h3{
+    margin-bottom:15px;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 20px;
+    font-family: var(--font-family-Montserrat);
+    color: rgb(52, 52, 52);
+}
+
+.service-box p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: var(--font-family-Poppins);
+    color: rgb(116, 129, 130);
+}
+
+.carousel-inner img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    
+
+}
+
+#contact{
+    background-color: chocolate;
+    height: 500px;
+}
+
+#team{
+    background-color: coral;
+    height: 500px;
+}
+
+#clients{
+    background-color: cornflowerblue;
+    height: 500px;
+}
+
