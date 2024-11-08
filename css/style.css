@@ -1,6 +1,6 @@
 :root{
     --light-bg-color:#F3F3F3;
-    --light-font-colo: rgb(116, 129, 130);
+    --light-font-color: rgb(116, 129, 130);
     --font-family-Poppins: 'Poppins', sans-serif;
     --font-family-Montserrat: var(--font-family-Montserrat);
 }
@@ -9,9 +9,11 @@
     margin: 0;
 }
 
-.navbar{
-    background-color: aqua;
-    position:fixed;
+.navbar {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    
 }
 
 .navbar-brand{
@@ -26,12 +28,12 @@
     margin-left: auto;
     
 }
+
 .nav-item{
     margin-right: 40px;
 }
 
 .nav-link{
-    color:white;
     font-family:var( --font-family-Poppins);
     font-size: 14px;
     font-weight: 400;
@@ -218,7 +220,7 @@
     font-weight: 400;
     line-height: 24px;
     font-family: var(--font-family-Poppins);
-    color:     rgb(116, 129, 130);
+    color:var(--light-font-color);
 }
 
 .progress-bar p{
@@ -314,7 +316,7 @@
     font-weight: 400;
     line-height: 22px;
     font-family: var(--font-family-Poppins);
-    color: rgb(116, 129, 130);
+    color: var(--light-font-color);
 }
 
 .carousel-inner img{
@@ -339,7 +341,7 @@
     font-weight:400;
     font-size:15px;
     line-height: 24px;
-    color: rgb(116, 129, 130);
+    color: var(--light-font-color);
 }
 
 .carousel-inner h5{
@@ -359,16 +361,112 @@
 }
 
 #contact{
-    background-color: chocolate;
-    height: 500px;
+    background-color: white;
 }
 
 #team{
-    background-color: coral;
-    height: 500px;
+    background-color: var(--light-bg-color);
 }
 
-#Clients{
+#team .header-title{
+    margin-bottom: 50px;
+}
+
+.card{
+    border: none;
+    margin-bottom: 80px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card-img-top{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; 
+    transition: 0.7s ease;
+}
+
+.img-container{
+    overflow: hidden;
+    position: relative;
+}
+
+.img-social-layer{
+    position: absolute;
+    top: 1.5%;
+    left: 1.5%;
+    width:97%;
+    height: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    opacity: 0;
+}
+
+.card:hover .img-social-layer{
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+.img-social-layer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-social-layer li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+.img-social-layer i{
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.img-social-layer i:hover{
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+
+.card-img-top:hover{
+    transform: scale(1.2);
+}
+
+.card-body{
+    background-color: #5b5b5b;
+    padding:30px 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+.card-body h3{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 28px;
+    font-family: var(--font-family-Montserrat);
+    color: white;
+}
+
+.card-body h4{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+    font-family: var(--font-family-Poppins);
+    color:white;
+}
+
+#clients{
     background-color: #F7F7F7;
 }
 
@@ -376,4 +474,107 @@
     width: 80%;
     margin: 0 auto;
     padding-bottom: 20px;
+}
+
+.clients-stat{
+    padding:80px 0;
+}
+
+.clients-stat i{
+    font-size: 30px;
+    color: rgb(52, 52, 52);
+    padding: 0 0 20px 0;
+}
+
+.clients-stat h2{
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 33px;
+    font-family: var(--font-family-Montserrat);
+    color: rgb(52, 52, 52);
+}
+
+.clients-stat h6{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: var(--font-family-Poppins);
+    color: var(--light-font-color);
+}
+
+#contact i{
+    font-size:25px;
+    color: rgb(52, 52, 52);
+    margin: 0 30px 10px 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+}
+
+#contact h5{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    font-family: var(--font-family-Montserrat);
+    color: rgb(52, 52, 52);
+}
+
+#contact p{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: var(--font-family-Poppins);
+    color: rgb(116, 129, 130);
+}
+
+
+#contact .contact-info{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#contact .contact-card:hover i{
+    background-color: black;
+    color: white;
+    transition: 0.7s ease;
+}
+
+form{
+    width: 90%;
+    margin: 50px auto;
+}
+
+#contact input,#contact textarea{
+    background-color: #f4f4f4;
+    border: none;
+
+}
+
+#contact button{
+    font-family: var(--font-family-Poppins);
+    font-size: 13px;
+    font-weight: 400;
+    line-height:19px;
+    width: 105px;
+}
+
+#contact button:hover{
+    background-color: white;
+    color: black;
+    border:#000 1px solid;
+    transition: 0.5s ease;
+}
+
+footer{
+    background-color: #1c1c1c;
+    padding: 30px 0;
+}
+
+footer p{
+    font-family: var(--font-family-Poppins);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(116, 129, 130);
+    margin:auto;
 }
