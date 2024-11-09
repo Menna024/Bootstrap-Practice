@@ -9,11 +9,17 @@
     margin: 0;
 }
 
-.navbar {
-    position: absolute;
+.nav-home {
+    position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: transparent;
-    
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-home.scrolled {
+    background-color: white;
 }
 
 .navbar-brand{
@@ -38,7 +44,9 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    color:rgb(34,34,34);
 }
+
 
 #home{
     height: 100vh;
@@ -247,10 +255,9 @@
 }
 
 #works{
-    background-color: cadetblue;
-    height: 500px;
+    background-color: white;
+    
 }
-
 
 #services{
     background-color: var(--light-bg-color);
@@ -285,7 +292,7 @@
 .service-box{
     padding: 35px;
     border: 15px solid var(--light-bg-color);
-    border-radius: 20px; 
+    border-radius: 20px;
 }
 
 .service-box:hover i{
@@ -379,6 +386,13 @@
     border-top-right-radius: 0;
 }
 
+#works .card{
+    border: none;
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 .card-img-top{
     border-top-left-radius: 0;
     border-top-right-radius: 0; 
@@ -406,9 +420,52 @@
     opacity: 0;
 }
 
-.card:hover .img-social-layer{
+ .img-works-layer{
+    position: absolute;
+    top: 1.5%;
+    left: 1.5%;
+    width:97%;
+    height: 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+}
+
+.img-works-layer h6{
+    margin-left: 25px;
+    margin-bottom:15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 13px;
+    font-family: var(--font-family-Montserrat);
+    color: rgb(52, 52, 52);
+    transform: translateY(-140px);
+    transition: 0.5s;
+
+}
+
+
+
+ .card:hover .img-social-layer{
     transform: rotateY(360deg);
     opacity: 1;
+}
+
+#works .img-container:hover  .img-works-layer{
+    opacity: 1;
+}
+
+#works .img-container:hover .img-works-layer li{
+    transform: translateY(-160px);
+}
+
+
+#works .img-container:hover .img-works-layer h6{
+    transform: translateY(0.5px);
 }
 
 .img-social-layer ul{
@@ -418,14 +475,35 @@
     align-items: center;
 }
 
+.img-works-layer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(160px);
+}
 
 .img-social-layer li{
     list-style: none;
     margin: 0 10px;
 }
 
+.img-works-layer li{
+    list-style: none;
+    margin: 0 3px;
+    transition: 0.5s;
+}
+
 .img-social-layer i{
     font-size: 20px;
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.img-works-layer i{
+    font-size: 14px;
     color: white;
     padding: 10px;
     background-color: black;
@@ -437,6 +515,14 @@
     color: black;
     border: 1px black solid;
 }
+
+
+.img-works-layer i:hover{
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+}
+
 
 .card-img-top:hover{
     transform: scale(1.2);
